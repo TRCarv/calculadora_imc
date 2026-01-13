@@ -14,22 +14,29 @@ public class Main extends Application {
 		// Etiquetas para os campos de entrada
 
 		Label etiquetaPeso = new Label("Peso");
+		etiquetaPeso.getStyleClass().add("etiqueta");
 		Label etiquetaAltura = new Label("Altura");
+		etiquetaAltura.getStyleClass().add("etiqueta");
 
 		// Campos de entrada
 
 		TextField campoPeso = new TextField();
 		campoPeso.setPromptText("Peso em kg");
+		campoPeso.getStyleClass().add("caixaTexto");
+
 		TextField campoAltura = new TextField();
 		campoAltura.setPromptText("Altura em metro");
+		campoAltura.getStyleClass().add("caixaTexto");
 
 		// Label para mostrar o resultado do imc
 
 		Label etiquetaResultado = new Label();
+		etiquetaResultado.getStyleClass().add("etiqueta");
 
 		// Botão para calcular o IMC
 
 		Button botaoCalcular = new Button("Calcular IMC");
+		botaoCalcular.getStyleClass().add("botaoCalcular");
 		botaoCalcular.setOnAction(e -> {
 			try {
 			double peso = Double.parseDouble(campoPeso.getText().replace(",","."));
@@ -78,10 +85,12 @@ public class Main extends Application {
 		VBox layout = new VBox(10, etiquetaPeso, campoPeso, etiquetaAltura, campoAltura, botaoCalcular,etiquetaResultado);
 		layout.setPadding(new Insets(10));
 		layout.setAlignment(Pos.CENTER);
+		layout.getStyleClass().add("layout");
 
 		// Cena e Palco
 
-		Scene cena = new Scene(layout, 300, 250);
+		Scene cena = new Scene(layout, 400, 250);
+		cena.getStylesheets().add("./styles.css");
 		palco.setTitle("Calculadora de IMC");
 		palco.setScene(cena);
 		palco.show();
@@ -95,21 +104,7 @@ public class Main extends Application {
 
 /* Melhorias para fazer:
 
-- 	TRATAMENTO DE EXCESSÕES
-			try{
-			// peso
-			// altura
-			// calculo IMC
-			// resultado
-			} catch (NumberFormatException ex){
-				etiqueta.Resultado.SetText("Insira Números Válidos");
-			}
-
-- 	CONVERSÃO PARA SEPARAÇÃO DE CASA DECIMAIS COM VÍRGULA
-	// double peso = Double.parseDouble(campoPeso.getText().replace(",","."));
-	// double peso = Double.parseDouble(campoAltura.getText().replace(",","."));
-
-
+Adicionar estilo com CSS. Fazer em outro arquivo para treinar
 
 	*/
 

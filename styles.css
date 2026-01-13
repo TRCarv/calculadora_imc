@@ -1,0 +1,28 @@
+.etiqueta {
+	-fx-font-family: Verdana;
+	-fx-font-size: 14pt;
+	-fx-font-weight: bold;
+	-fx-text-fill: #CCCCCC;
+	
+}
+
+.layout {
+	-fx-background-color: #363636;
+	
+}
+
+.caixaTexto {
+	-fx-text-fill: #CCCCCC;
+	-fx-font-family: Verdana;
+	-fx-font-size: 14pt;
+	-fx-font-weight: bold;
+	-fx-background-color: #9370DB;
+}
+
+.botaoCalcular {
+	-fx-text-fill: #CCCCCC;
+	-fx-font-family: Verdana;
+	-fx-font-size: 14pt;
+	-fx-font-weight: bold;
+	-fx-background-color: #9370DB;
+}
